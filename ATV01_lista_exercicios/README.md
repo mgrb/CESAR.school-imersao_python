@@ -53,8 +53,10 @@ Com o projeto instanciado no VSCODE e já dentro do DevContainer:
 1. Executar o comando python apontando para a questão que se deseja:
 Exemplo:
 ```
-$> python /workspace/src/q01.py
+$> python /workspace/src/q03.py
 ```
+
 Output:
+
 ![Exemplo de output do terminal](docs/20240403_print_terminal.png)
 
