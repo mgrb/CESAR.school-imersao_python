@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "cesar-school-initpython"
+version = "0.1.0"
+description = "Resolução da lista de exercícios 01 da disciplina de Imersão em Python."
+authors = ["Marlos Ribeiro <mgrb@cesar.school>"]
+readme = "README.md"
+packages = [{include = "cesar"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

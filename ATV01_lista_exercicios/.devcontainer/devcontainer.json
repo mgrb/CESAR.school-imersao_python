@@ -1,0 +1,17 @@
+{
+    "name": "Dev Container - Imersão Python",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "python_project",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "oderwat.indent-rainbow",
+                "charliermarsh.ruff",
+                "tamasfe.even-better-toml"
+            ]
+        }
+    },
+    "postCreateCommand": "make"
+}
