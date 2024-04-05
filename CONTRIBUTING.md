@@ -1,19 +1,4 @@
-# Atividade 01 - Lista de exercicios
-CESAR.School 
-Imersão Python
-Professora: Joyce Teixeira
-
-Repositório destinado para resolução da lista de exercicios da lista de exercios 01 da disciplina de Imersão em Python.
-
-- Lista de exercicios: [PDF](docs/exe_list_01-20240402.pdf)
-
-## Organização
- 
-Cada questão da lista esta resolvida em um script a parte.
-- Questão 01 -> q01.py
-- Questão 02 -> q02.py
-- Questão 03 -> q03.py
-- ...
+# Contribuindo para o Projeto
 
 ## Executar o Projeto
 
@@ -53,10 +38,9 @@ Com o projeto instanciado no VSCODE e já dentro do DevContainer:
 1. Executar o comando python apontando para a questão que se deseja:
 Exemplo:
 ```
-$> python /workspace/src/q03.py
+$> python /workspace/src/ATV01/q03.py
 ```
 
 Output:
 
 ![Exemplo de output do terminal](docs/20240403_print_terminal.png)
-
