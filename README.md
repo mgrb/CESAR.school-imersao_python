@@ -11,7 +11,7 @@ Professora: Joyce Teixeira
 1. **ATV 02** - Operadores [Link](https://forms.gle/BD66WMhx7QpwPcN36?authuser=0) 
 1. **ATV 03** - Instruções de Decisão: [PDF](docs/exe_list_03-20240403.pdf) - [Code](src/ATV03/)
 
-Cada questão da lista esta resolvida em um script a parte debtro do diretório de cada lista de exercícios.
+Cada questão da lista foi resolvida em um script a parte dentro do diretório de sua respectiva lista de exercícios.
 - Questão 01 -> q01.py
 - Questão 02 -> q02.py
 - Questão 03 -> q03.py
