@@ -1,4 +1,4 @@
-# CESAR.school - Imersão Python :snake
+# CESAR.school - Imersão Python 🐍
 ![image](/docs/header.jpg)
 Repositório destinado as implementações de soluções para as listas de exercicios da disciplina de Imersão em Python.
 
