@@ -10,6 +10,7 @@ Professora: Joyce Teixeira
 1. **ATV 01** - Conceitos Básicos, Constantes e Variáveis, Entradas e Saídas: [PDF](docs/exe_list_01-20240402.pdf) - [Code](src/ATV01/)
 1. **ATV 02** - Operadores [Link](https://forms.gle/BD66WMhx7QpwPcN36?authuser=0) 
 1. **ATV 03** - Instruções de Decisão: [PDF](docs/exe_list_03-20240403.pdf) - [Code](src/ATV03/)
+1. **ATV 04** - Instruções de Repetição - Parte 01: [PDF](docs/exe_list_04_20240406.pdf) - [Code](src/ATV04/)
 
 Cada questão da lista foi resolvida em um script a parte dentro do diretório de sua respectiva lista de exercícios.
 - Questão 01 -> q01.py
