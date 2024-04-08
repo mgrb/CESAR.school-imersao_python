@@ -1,8 +1,6 @@
 SHEll := /bin/zsh
-.PHONY: venv install_requirements
+.PHONY: venv
 
 venv:
-	@poetry shell -n
+	poetry run poetry install
 
-install_requirements:
-	@poetry install
