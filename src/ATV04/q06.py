@@ -10,7 +10,7 @@ usuário.
 from communs.util import print_header
 
 if __name__ == '__main__':
-    print_header('Maior número par')
+    print_header('Maior e Menor número par')
 
     maior: int = None
     menor: int = None
