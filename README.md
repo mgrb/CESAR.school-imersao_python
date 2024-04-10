@@ -12,6 +12,8 @@ Professora: Joyce Teixeira
 1. **ATV 03** - Instruções de Decisão: [PDF](docs/exe_list_03-20240403.pdf) - [Code](src/ATV03/)
 1. **ATV 04 - p1** - Instruções de Repetição - Parte 01 - While: [PDF](docs/exe_list_04_p1_20240406.pdf) - [Code](src/ATV04/)
 1. **ATV 04 - p2** - Instruções de Repetição - Parte 02 - For: [PDF](docs/exe_list_04_p2_20240406.pdf) - [Code](src/ATV04/)
+1. **ATV 05** - Listas: [PDF](docs/exe_list_05-20240409.pdf) - [Code](src/ATV05/)
+1. **ATV 06** - Strings: [PDF](docs/exe_list_06-20240409.pdf) - [Code](src/ATV06/)
 
 Cada questão da lista foi resolvida em um script a parte dentro do diretório de sua respectiva lista de exercícios.
 - Questão 01 -> q01.py
