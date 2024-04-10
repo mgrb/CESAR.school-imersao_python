@@ -19,10 +19,8 @@ Ao encerrar o programa devem ser informados:
 ● a média dos pesos de todos os clientes
 """
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('Avaliação Academia')
+    print('\n\n****\n Avaliação Academia \n****\n')
 
     qtd_clientes = int(input('Quantos clientes há na academia? '))
     cod_maior: int = 0

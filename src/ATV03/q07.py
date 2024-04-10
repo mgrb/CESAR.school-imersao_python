@@ -15,8 +15,6 @@ informar quantos minutos e quantos GB ele utilizou no mês. O programa deve
 calcular e mostrar o valor total da fatura.
 """
 
-from communs.util import print_header
-
 VALOR_FRANQUIA_BASICO: int = 50
 VALOR_FRANQUIA_INTERMEDIARIO: int = 80
 VALOR_FRANQUIA_AVANCADO: int = 120
@@ -33,7 +31,7 @@ TAXA_MINUTO_ADICIONAL: int = 1
 TAXA_GB_ADICIONAL: int = 10
 
 if __name__ == '__main__':
-    print_header('Calculadora de Fatura')
+    print('\n\n****\n Calculadora de Fatura \n****\n')
 
     plano: int = int(
         input('Escolha o plano (1-Básico, 2-Intermediário, 3-Avançado): '),

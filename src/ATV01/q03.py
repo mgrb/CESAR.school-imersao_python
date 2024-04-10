@@ -4,8 +4,6 @@ Dados os lados a, b, e c de um triângulo, calcule sua área.
 Utilize a fórmula de Heron:
 """
 
-from communs.util import print_header
-
 
 def calc_semiperimetro(a: float, b: float, c: float) -> float:
     """Calcula o semiperímetro de um triângulo."""
@@ -19,7 +17,7 @@ def calc_area_heron(a: float, b: float, c: float) -> float:
 
 
 if __name__ == '__main__':
-    print_header('Área de um triângulo - Heron')
+    print('\n\n****\n Área de um triângulo - Heron \n****\n')
     a = float(input('Digite o tamanho do lado a: '))
     b = float(input('Digite o tamanho do lado b: '))
     c = float(input('Digite o tamanho do lado c: '))

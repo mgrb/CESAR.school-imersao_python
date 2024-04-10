@@ -4,12 +4,10 @@ Fa√ßa um programa que leia o nome, idade e altura de 5 pessoas. O sistema dever√
 apresentar o nome, idade e altura da pessoa mais alta.
 """
 
-from communs.util import print_header
-
 QTD_PESSOAS = 5
 
 if __name__ == '__main__':
-    print_header('Pessoa mais alta')
+    print('\n\n****\n Pessoa mais alta \n****\n')
 
     nome_maior: str = ''
     idade_maior: int = 0

@@ -5,10 +5,8 @@ desejadas. Calcule e mostre o valor de cada parcela, considerando que não há
 juros.
 """
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('Calculadora de Crediário')
+    print('\n\n****\n Calculadora de Crediário \n****\n')
     valor_total = float(input('Digite o valor total da compra: '))
     numero_parcelas = int(input('Digite o número de parcelas: '))
     valor_parcela = valor_total / numero_parcelas

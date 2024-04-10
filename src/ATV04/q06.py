@@ -7,10 +7,8 @@ Faça também um algoritmo que encontre qual o menor número par digitado pelo
 usuário.
 """
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('Maior e Menor número par')
+    print('\n\n****\n Maior e Menor número par \n****\n')
 
     maior: int = None
     menor: int = None

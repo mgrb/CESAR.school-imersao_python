@@ -14,10 +14,8 @@ sessão e informar a idade. Caso o usuário não seja idoso ou criança, ele dev
 informar se é estudante. O programa deve informar o valor total da compra.
 """
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('PDV Ingressos')
+    print('\n\n****\n PDV Ingressos \n****\n')
 
     tipo_sessao = int(
         input('Escolha o tipo de sessão (1-Matinê, 2-Vespertina, 3-Noturna): '),

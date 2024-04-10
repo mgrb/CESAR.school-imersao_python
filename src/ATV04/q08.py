@@ -7,10 +7,8 @@ calcular um bônus de 15% e exibir “Cliente apto para receber o bônus”. Inf
 ao final quantos clientes ganharam o bônus e o total em reais.
 """
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('Calculadora de Bonos de Natal')
+    print('\n\n****\n Calculadora de Bonos de Natal \n****\n')
 
     qtd_clientes = int(input('Quantos clientes há na loja? '))
     total_bonos = 0.0

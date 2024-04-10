@@ -10,10 +10,8 @@ tradicional.
 Ao final, o programa deve exibir a sequência completa de 22 números.
 """
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('Sequencia de Fibonacci')
+    print('\n\n****\n Sequencia de Fibonacci \n****\n')
 
     n1 = int(input('Insira o primeiro número: '))
     n2 = int(input('Insira o segundo número: '))

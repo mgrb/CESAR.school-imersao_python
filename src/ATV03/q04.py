@@ -14,10 +14,8 @@ Escreva um programa que peça ao usuário para inserir o número de infrações 
 cometeu no último ano e informe em qual categoria ele se encaixa.
 """
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('Classificador de Motoristas')
+    print('\n\n****\n Classificador de Motoristas \n****\n')
 
     num_infracoes = int(
         input('Digite o número de infrações cometidas no último ano: '),

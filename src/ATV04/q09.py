@@ -12,10 +12,8 @@ terminando em dezembro. Após a inserção, o programa deve calcular:
 ● O total de vendas no ano.
 """
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('Análise de Vendas')
+    print('\n\n****\n Análise de Vendas \n****\n')
 
     mes_maior_venda = None
     mes_menor_venda = None

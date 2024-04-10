@@ -4,10 +4,8 @@ Peça ao usuário para inserir o valor original de um produto e a porcentagem de
 desconto. Calcule e mostre o valor do produto após o desconto.
 """
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('Calculadora de desconto')
+    print('\n\n****\n Calculadora de desconto \n****\n')
     valor_original = float(input('Digite o valor original do produto: '))
     desconto = float(input('Digite a porcentagem de desconto: '))
     valor_descontado = valor_original * (1 - desconto / 100)

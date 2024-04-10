@@ -6,10 +6,8 @@ usuário deverá ser alertado. O programa deve calcular a média das notas.
 Continue coletando notas até que o usuário insira -1.
 """
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('Avaliação de Produtos')
+    print('\n\n****\n Avaliação de Produtos \n****\n')
 
     # Inicializa as variáveis
     qtd_notas: int = 0

@@ -5,10 +5,8 @@ Domingo, 2- Segunda, etc.). Exibir mensagem “Valor Inválido” caso um númer
 inesperado for informado.
 """
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('Dia da Semana')
+    print('\n\n****\n Dia da Semana \n****\n')
 
     dia = int(input('Digite o número correspondente ao dia da semana: '))
 

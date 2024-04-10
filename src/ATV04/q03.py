@@ -7,10 +7,8 @@ novo nome ou o usuário informará “FIM” para encerrar o sistema. Por fim, o
 sistema deverá apresentar a quantidade de tipos de produtos inseridos.
 """
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('Controle de Estoque')
+    print('\n\n****\n Controle de Estoque \n****\n')
 
     # Inicializa as variáveis
     qtd_produtos = 0

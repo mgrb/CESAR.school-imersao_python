@@ -5,10 +5,8 @@ exibir o total de idades válidas digitadas, a média das idades, quantas são
 maiores ou igual a 25 e quantas são menores que 25.
 """
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('contador de idades válidas')
+    print('\n\n****\n contador de idades válidas \n****\n')
 
     # Inicializa as variáveis
     qtd_idades = 0

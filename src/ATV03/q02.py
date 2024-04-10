@@ -7,10 +7,8 @@ com aumento, conforme tabela abaixo:
 
 import sys
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('Calculadora de Aumento Salarial')
+    print('\n\n****\n Calculadora de Aumento Salarial \n****\n')
 
     cargo: int = int(input('Digite o código do cargo: '))
     salario: float = float(input('Digite o salário atual: '))

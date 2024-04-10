@@ -16,10 +16,8 @@ noites e informe o valor total da estadia. Se a quantidade de noites informada
 for maior que o limite disponível, informe ao usuário e finalize o sistema.
 """
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('Sistema de Reservas')
+    print('\n\n****\n Sistema de Reservas \n****\n')
 
     tipo_suite = int(
         input('Escolha o tipo de suíte (1-Standard, 2-Luxo, 3-Presidencial): '),

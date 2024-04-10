@@ -5,10 +5,8 @@ usuário o código do serviço efetuado: (1 - banho; 2 - tosa; 3 - banho e tosa;
 4- outros). Por fim, exiba a quantidade de solicitações para cada um deles.
 """
 
-from communs.util import print_header
-
 if __name__ == '__main__':
-    print_header('Petshop')
+    print('\n\n****\n Petshop \n****\n')
 
     # Inicializa as variáveis
     qtd_banho = 0
