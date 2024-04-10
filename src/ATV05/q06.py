@@ -24,6 +24,7 @@ print('\n\n****\n Questão 06. Avaliação de Restaurantes\n****\n')
 if __name__ == '__main__':
     restaurantes = []
     avaliacoes = []
+    qtd_avaliacoes = []
 
     restaurante = None
 
@@ -32,12 +33,40 @@ if __name__ == '__main__':
             'Informe o nome do restaurante ou digite "PARE" para finalizar: ',
         )
 
-        if restaurante == 'PARE':
+        if restaurante.upper() == 'PARE':
             break
 
         nota = float(input('Informe a nota do restaurante (de 0 a 5): '))
 
-        restaurantes.append(restaurante)
-        avaliacoes.append(nota)
+        index = (
+            restaurantes.index(restaurante)
+            if restaurante in restaurantes
+            else -1
+        )
 
-    # TODO: Implementar a lógica de atualização da média de avaliações
+        if index == -1:
+            # inicializa a lista de restaurantes quando restaurante não existe
+            restaurantes.append(restaurante)
+            avaliacoes.append(nota)
+            qtd_avaliacoes.append(1)
+        else:
+            # Calcula a nova média
+            avaliacoes[index] = (
+                avaliacoes[index] * qtd_avaliacoes[index] + nota
+            ) / (qtd_avaliacoes[index] + 1)
+
+            # Atualiza a quantidade de avaliações
+            qtd_avaliacoes[index] += 1
+
+    maior_avaliação = max(avaliacoes)
+    menor_avaliação = min(avaliacoes)
+
+    index_maior = avaliacoes.index(maior_avaliação)
+    index_menor = avaliacoes.index(menor_avaliação)
+
+    print(
+        f'Restaurante com a maior nota: {restaurantes[index_maior]} - Nota média: {avaliacoes[index_maior]}',
+    )
+    print(
+        f'Restaurante com a menor nota: {restaurantes[index_menor]} - Nota média: {avaliacoes[index_menor]}',
+    )
