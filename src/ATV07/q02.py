@@ -10,6 +10,8 @@ Exiba a distância calculada.
 """
 
 if __name__ == '__main__':
+    print('\n\n****\n Questão 02. Calculadora Euclidiana\n****\n')
+
     p1 = tuple(
         map(
             float,

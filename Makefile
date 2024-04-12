@@ -5,6 +5,7 @@ venv:
 	@poetry run poetry install
 
 commit:
+	@git status -s 
 	@git add .
 	@git commit -m "$(msg)"
 
