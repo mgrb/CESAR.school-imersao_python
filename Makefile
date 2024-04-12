@@ -9,7 +9,7 @@ commit:
 	@echo "-------------------------------------"
 	@git status -s 
 	@echo "-------------------------------------"
-	@read -p "Mensagem do commit: " menssagem ; \
+	@read -p "Commit msg: " menssagem ; \
 	git add . ;\
 	git commit -m "$$menssagem" ;\
 
