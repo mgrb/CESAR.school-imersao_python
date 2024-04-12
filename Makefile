@@ -9,10 +9,9 @@ commit:
 	@echo "-------------------------------------"
 	@git status -s 
 	@echo "-------------------------------------"
-	@read -p "Mensagem do commit: " msg; \
-
-	@git add .
-	@git commit -m "$$(msg)"
+	@read -p "Mensagem do commit: " menssagem ; \
+	git add . ;\
+	git commit -m "$$menssagem" ;\
 
 update:
 	@git fetch origin
