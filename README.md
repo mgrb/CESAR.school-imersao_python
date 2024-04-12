@@ -14,6 +14,7 @@ Professora: Joyce Teixeira
 1. **ATV 04 - p2** - Instruções de Repetição - Parte 02 - For: [PDF](docs/exe_list_04_p2_20240406.pdf) - [Code](src/ATV04/)
 1. **ATV 05** - Listas: [PDF](docs/exe_list_05-20240409.pdf) - [Code](src/ATV05/)
 1. **ATV 06** - Strings: [PDF](docs/exe_list_06-20240409.pdf) - [Code](src/ATV06/)
+1. **ATV 07** - Tuplas e Dicionários: [PDF](docs/exe_list_07-20240411.pdf) - [Code](src/ATV07/)
 
 Cada questão da lista foi resolvida em um script a parte dentro do diretório de sua respectiva lista de exercícios.
 - Questão 01 -> q01.py
