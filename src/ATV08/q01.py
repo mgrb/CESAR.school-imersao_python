@@ -12,11 +12,11 @@ def quadrado(x: int) -> dict:
 
     Arguments:
     ---------
-        x {int} -- Número de 1 a x.
+        x: {int}  Número maior que 1.
 
     Returns:
     -------
-        dict -- Dicionário com os números de 1 a x e seus respectivos quadrados.
+        dict: Dicionário com os números de 1 a x e seus respectivos quadrados.
 
     """
     if x <= 1:
@@ -25,8 +25,9 @@ def quadrado(x: int) -> dict:
     return {i: i**2 for i in range(1, x + 1)}
 
 
-def main():
-    x = 15
+def main() -> None:
+    """Função principal."""
+    x = int(input('Digite um número: '))
     print(quadrado(x))
 
 
