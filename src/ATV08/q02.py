@@ -18,6 +18,8 @@ No final do programa principal, exiba o nome do campeão em maiúsculas e sua
 média de tempo com duas casas decimais.
 """
 
+from __future__ import annotations
+
 
 def calcular_media(tempos: list) -> float:
     """Função que calcula a média dos tempos.
@@ -34,21 +36,21 @@ def calcular_media(tempos: list) -> float:
     return sum(tempos) / len(tempos)
 
 
-def encontrar_campeao(tempos: dict) -> tuple:
+def encontrar_campeao(tempos_dict: dict) -> tuple[str, float]:
     """Função que encontra o campeão.
 
     Arguments:
     ---------
-        tempos: {dict}  Dicionário com os tempos dos corredores.
+        tempos_dict: {dict}  Dicionário com os tempos dos corredores.
 
     Returns:
     -------
-        tuple: Tupla com o nome do campeão e sua média de tempo.
+        tuple[str, float]: Nome do campeão e sua média de tempo.
 
     """
     menor_media = float('inf')
     campeao = ''
-    for corredor, tempos in tempos.items():
+    for corredor, tempos in tempos_dict.items():
         media = calcular_media(tempos)
         if media < menor_media:
             menor_media = media
