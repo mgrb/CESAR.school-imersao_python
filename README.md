@@ -15,6 +15,8 @@ Professora: Joyce Teixeira
 1. **ATV 05** - Listas: [PDF](docs/exe_list_05-20240409.pdf) - [Code](src/ATV05/)
 1. **ATV 06** - Strings: [PDF](docs/exe_list_06-20240409.pdf) - [Code](src/ATV06/)
 1. **ATV 07** - Tuplas e Dicionários: [PDF](docs/exe_list_07-20240411.pdf) - [Code](src/ATV07/)
+1. **ATV 08** - Funções: [PDF](docs/exe_list_08-20240413.pdf) - [Code](src/ATV08/)
+1. **PROJETO FINAL** - Desenvolvimento de um CRUD em Python: [PDF](docs/projeto_final_20240413.pdf) - [Code](src/projeto_final/)
 
 Cada questão da lista foi resolvida em um script a parte dentro do diretório de sua respectiva lista de exercícios.
 - Questão 01 -> q01.py
