@@ -22,6 +22,8 @@ parâmetros via input e a função equivalente à opção escolhida deve ser cha
 Ao finalizar o programa todo o dicionário deve ser exibido.
 """
 
+from __future__ import annotations
+
 agenda = {}
 
 
@@ -58,7 +60,7 @@ def buscar_contato(nome: str) -> tuple[str, str] | None:
 
     Returns:
     -------
-        str: Telefone do contato.
+        tuple[str, str] | None: Tupla com o nome e o telefone do contato ou None se não encontrar.
 
     """
     contato = agenda.get(nome)
@@ -78,12 +80,13 @@ def main() -> None:
         opcao = input('Digite a opção desejada: ')
 
         match opcao:
-            case '1':
+            case '1':  # Incluir contato
                 nome = input('Digite o nome do contato: ')
                 telefone = input('Digite o telefone do contato: ')
                 incluir_contato(nome, telefone)
                 print('Contato adicionado com sucesso!')
-            case '2':
+
+            case '2':  # Excluir contato
                 nome = input('Digite o nome do contato: ')
                 is_excluido = excluir_contato(nome)
                 print(
@@ -91,17 +94,19 @@ def main() -> None:
                     if is_excluido
                     else 'Contato não encontrado na agenda.',
                 )
-            case '3':
+
+            case '3':  # Buscar contato
                 nome = input('Digite o nome do contato: ')
                 contato = buscar_contato(nome)
-                if contato is not None:
-                    print(f'Número de telefone de {contato[0]}: {contato[1]}')
-                else:
+                if contato is None:
                     print('Contato não encontrado na agenda.')
+                else:
+                    print(f'Número de telefone de {contato[0]}: {contato[1]}')
 
-            case '4':
+            case '4':  # Finalizar programa
                 break
-            case _:
+
+            case _:  # Opção inválida
                 print('Opção inválida!')
     print(agenda)
 

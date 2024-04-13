@@ -7,6 +7,17 @@ programa principal.
 """
 
 
+class NaoMenorQueUmError(Exception):
+    """Exceção para valores menores ou iguais a 1."""
+
+    def __init__(
+        self,
+        message: str = 'O valor de x deve ser maior que 1.',
+    ) -> None:
+        """Construtor da classe."""
+        super().__init__(message)
+
+
 def quadrado(x: int) -> dict:
     """Função que retorna o quadrado de todos os números de 1 a x.
 
@@ -20,7 +31,7 @@ def quadrado(x: int) -> dict:
 
     """
     if x <= 1:
-        raise ValueError('O valor de x deve ser maior que 1.')
+        raise NaoMenorQueUmError
 
     return {i: i**2 for i in range(1, x + 1)}
 

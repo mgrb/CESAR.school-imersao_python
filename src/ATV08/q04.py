@@ -23,8 +23,8 @@ def atualizar_numeros(update_target: dict, origin: dict) -> None:
 
     Arguments:
     ---------
-        maria: {dict}  Dicionário a ser atualizado.
-        sara: {dict}  Dicionário com os novos valores.
+        update_target: {dict}  Dicionário a ser atualizado.
+        origin: {dict}  Dicionário com os novos valores.
 
     """
     for chave, valor in origin.items():
