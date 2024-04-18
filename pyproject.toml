@@ -8,6 +8,7 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
+rich = "^13.7.1"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.3.5"
