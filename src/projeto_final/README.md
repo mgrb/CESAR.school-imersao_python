@@ -71,6 +71,115 @@ Como  usuário do sistema desejo manter o cadastro das unidades habitacionais, p
 
 #### CENARIO 1 - Inclusão de unidade
 
-> - **DADO** que o usuário acesse o meno de inserir unidade;
->  - **QUANDO** ele entrar com os dados referente a unidade que deseja incluir, seguindo as definições descritas em [Unidade Habitacional](#unidade-habitacional) corretamente;
+> - **DADO QUE** o usuário acesse o menu de inserir unidade;
+> - **QUANDO** ele entrar com os dados referentes a uma unidade que deseja incluir, seguindo as definições descritas em [Unidade Habitacional](#unidade-habitacional), corretamente;
 > - **ENTÃO** o sistema guardará estas informações e informará ao usuário que o cadastro ocorreu com sucesso.
+
+#### CENARIO 2 - Atualização de dados de uma unidade
+
+> - **DADO QUE** o usuário acesso o meno de atualizar unidade;
+> - **QUANDO** ele informa o ID da unidade a ser atualizada, o sistema valida se a unidade existe, e caso existe o sistema segue solicitando os demais dados da unidade([ver definição de unidade](#unidade-habitacional));
+> - **ENTÃO** o sistema guradará as novas informações e informará ao usuário que a atualização ocorreu com sucesso.
+
+#### CENARIO 3 - Exclusão de unidade
+
+> - **DADO QUE** o usuário acesse o menu de excluir unidade;
+> - **QUANDO** ele informa o ID da unidade a ser excluida, o sistema valida se a unidade existe, e caso exista o sistema solicita confirmação da exclusão;
+> - **ENTÃO** o sistema excluirá a unidade e informará ao usuário que a exclusão ocorreu com sucesso.
+
+#### CENARIO 4 - Listagem de unidades
+
+> - **DADO QUE** o usuário acesse o menu de listar unidades;
+> - **QUANDO** ele solicita a listagem;
+> - **ENTÃO** o sistema apresentará a lista de todas as unidades cadastradas.
+
+### Cadastro de Moradores
+
+Como  usuário do sistema desejo manter o cadastro dos moradores, para que possa manter um resgistro dos moradores e seu relacionamento com as unidades habitacionais do condomino que administro.
+
+#### CENARIO 1 - Inclusão de morador
+
+> - **DADO QUE** o usuário acesse o menu de inserir morador;
+> - **QUANDO** ele entrar com os dados referentes a um morador que deseja incluir, seguindo as definições descritas em [Morador Responsável](#morador-responsável), corretamente;
+> - **ENTÃO** o sistema guardará estas informações e informará ao usuário que o cadastro ocorreu com sucesso.
+
+#### CENARIO 2 - Atualização de dados de um morador
+
+> - **DADO QUE** o usuário acesso o meno de atualizar morador;
+> - **QUANDO** ele informa o CPF do morador a ser atualizado, o sistema valida se o morador existe, e caso existe o sistema segue solicitando os demais dados do morador([ver definição de morador](#morador-responsável));
+> - **ENTÃO** o sistema guradará as novas informações e informará ao usuário que a atualização ocorreu com sucesso.
+
+#### CENARIO 3 - Exclusão de morador
+
+> - **DADO QUE** o usuário acesse o menu de excluir morador;
+> - **QUANDO** ele informa o CPF do morador a ser excluido, o sistema valida se o morador existe, e caso exista o sistema solicita confirmação da exclusão;
+> - **ENTÃO** o sistema excluirá o morador e informará ao usuário que a exclusão ocorreu com sucesso.
+
+#### CENARIO 4 - Listagem de moradores
+
+> - **DADO QUE** o usuário acesse o menu de listar moradores;
+> - **QUANDO** ele solicita a listagem;
+> - **ENTÃO** o sistema apresentará a lista de todos os moradores cadastrados.
+
+### Cadastro de Áreas Comuns
+
+Como  usuário do sistema desejo manter o cadastro das áreas comuns, para que possa manter um resgistro das áreas comuns do condomino que administro.
+
+#### CENARIO 1 - Inclusão de área comum
+
+> - **DADO QUE** o usuário acesse o menu de inserir área comum;
+> - **QUANDO** ele entrar com os dados referentes a uma área comum que deseja incluir, seguindo as definições descritas em [Área Comum](#área-comum), corretamente;
+> - **ENTÃO** o sistema guardará estas informações e informará ao usuário que o cadastro ocorreu com sucesso.
+
+#### CENARIO 2 - Atualização de dados de uma área comum
+
+> - **DADO QUE** o usuário acesso o meno de atualizar área comum;
+> - **QUANDO** ele informa o código da área a ser atualizada, o sistema valida se a área existe, e caso existe o sistema segue solicitando os demais dados da área([ver definição de área comum](#área-comum));
+> - **ENTÃO** o sistema guradará as novas informações e informará ao usuário que a atualização ocorreu com sucesso.
+
+#### CENARIO 3 - Exclusão de área comum
+
+> - **DADO QUE** o usuário acesse o menu de excluir área comum;
+> - **QUANDO** ele informa o código da área a ser excluida, o sistema valida se a área existe, e caso exista o sistema solicita confirmação da exclusão;
+> - **ENTÃO** o sistema excluirá a área e informará ao usuário que a exclusão ocorreu com sucesso.
+
+#### CENARIO 4 - Listagem de áreas comuns
+
+> - **DADO QUE** o usuário acesse o menu de listar áreas comuns;
+> - **QUANDO** ele solicita a listagem;
+> - **ENTÃO** o sistema apresentará a lista de todas as áreas cadastradas.
+
+### Gestão de Reservas de Áreas Comuns
+
+Como  usuário do sistema desejo manter um registro de reservas das áreas comuns, para que possa manter um controle das reservas e evitar conflitos de uso.
+
+#### CENARIO 1 - Agendamento de área comum
+
+> - **DADO QUE** o usuário acesse o menu de agendar área comum;
+> - **QUANDO** ele informa o CPF do morador responsável, o código da área comum e a data da reserva, o sistema valida se os dados estão corretos e se a área está disponível;
+> - **ENTÃO** o sistema guardará estas informações e informará ao usuário que o agendamento ocorreu com sucesso.
+
+#### CENARIO 2 - Reagendamento de área comum
+
+> - **DADO QUE** o usuário acesse o menu de reagendar área comum;
+> - **QUANDO** ele informa o CPF do morador responsável, o código da área comum e a data da reserva, o sistema valida se os dados estão corretos e se a área está disponível;
+> - **ENTÃO** o sistema guardará estas informações e informará ao usuário que o reagendamento ocorreu com sucesso.
+
+#### CENARIO 3 - Cancelamento de agendamento
+
+> - **DADO QUE** o usuário acesse o menu de cancelar agendamento;
+> - **QUANDO** ele informa o CPF do morador responsável, o código da área comum e a data da reserva, o sistema valida se os dados estão corretos e se a reserva existe;
+> - **ENTÃO** o sistema excluirá a reserva e informará ao usuário que o cancelamento ocorreu com sucesso.
+
+#### CENARIO 4 - Listagem de reservas
+
+> - **DADO QUE** o usuário acesse o menu de listar reservas;
+> - **QUANDO** ele solicita a listagem;
+> - **ENTÃO** o sistema apresentará a lista de todas as reservas cadastradas.
+
+
+<!-- TEMPLATE DE STORE
+> - **DADO QUE** xxx
+> - **QUANDO** xxx
+> - **ENTÃO** xxx 
+-->
