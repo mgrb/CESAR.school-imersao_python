@@ -195,3 +195,8 @@ insert_unidade_habitacional('104', 'Fátima', 'fafa@ig.com.br', '4 quartos')
 insert_morador('123.456.789-00', 'Fulano', 'fulano@uol.com', 1)
 insert_morador('987.654.321-00', 'Ciclano', 'ciclano@aol.com', 2)
 insert_morador('456.789.123-00', 'Geronimo', 'gege@terra.com.br', 3)
+
+insert_area_comum('Salão de Festas', 'Salão de festas com churrasqueira.')
+insert_area_comum('Piscina', 'Piscina com raia de 25m.')
+insert_area_comum('Academia', 'Academia completa com personal trainer.')
+insert_area_comum('Sauna', 'Sauna seca e a vapor.')
