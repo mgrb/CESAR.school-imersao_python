@@ -1,5 +1,7 @@
 # [🏢☝️] Andar de Cima
 
+![image](andar_de_cima_print.png)
+
 Sistema para gestão de condomínios habitacionais.
 
 **Andar de Cima** é uma solução abrangente e eficiente projetada para simplificar e otimizar todas as operações relacionadas à administração de condomínios habitacionais. Com uma interface intuitiva e recursos robustos, oferecemos uma plataforma centralizada para gerenciar todas as atividades, como o cadastro de moradores e gestão das áreas comuns, proporcionando transparência, eficiência e segurança.
