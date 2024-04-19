@@ -6,6 +6,25 @@ Sistema para gestão de condomínios habitacionais.
 
 **Andar de Cima** é uma solução abrangente e eficiente projetada para simplificar e otimizar todas as operações relacionadas à administração de condomínios habitacionais. Com uma interface intuitiva e recursos robustos, oferecemos uma plataforma centralizada para gerenciar todas as atividades, como o cadastro de moradores e gestão das áreas comuns, proporcionando transparência, eficiência e segurança.
 
+## Como executar
+
+Este projeto foi desenvolvido em Python 3.12.3 e utiliza o gerenciador de pacotes `pip` para instalar as dependências.
+
+Para executar o projeto, siga os passos abaixo:
+1. Faça o download o pacote [aqui](https://drive.google.com/uc?export=download&id=10A_JWoeOES1QPjZ9o8OZ4igoDufo4_I4)
+2. Extraia o pacote em um diretório de sua escolha
+3. Abra o terminal e navegue até o diretório onde o pacote foi extraído
+4. Execute o comando `pip install -r requirements.txt`
+5. Execute o comando `python main.py`
+
+Pronto! O sistema será iniciado e você poderá interagir com ele através do terminal.
+
+### Algumas telas do sistema
+| Listagem de Moradores | Cadastro de Morador | Listagem de Áreas Comuns| 
+|------------------------|----------------------|-------------------------|
+|![Listagem de Unidades Habitacionais](image-1.png)|![Processo de cadastro de Unidade Habitacional](image-2.png)|![Listagem de Reservas](image.png)|
+
+
 ## Funcionalidades
 
 1. [Cadastro de **Unidades Habitacionais**](#cadastro-de-unidades-habitacionais):
@@ -19,15 +38,15 @@ Sistema para gestão de condomínios habitacionais.
     - [x] Exclui morador; e
     - [x] Listar moradores.
 1. [Cadastro de **Áreas Comuns**](#cadastro-de-áreas-comuns):
-    - [ ] Inclui área comum;
-    - [ ] Altera área comun;
-    - [ ] Exclui área comun; e
-    - [ ] Listar área comuns.
+    - [x] Inclui área comum;
+    - [x] Altera área comun;
+    - [x] Exclui área comun; e
+    - [x] Listar área comuns.
 1. [Gestão de **Reservas de Áreas Comuns**](#gestão-de-reservas-de-áreas-comuns):
-    - [ ] Agendamento de área comum;
-    - [ ] Reagendamento de área comum;
-    - [ ] Cancelamento de agendamento; e
-    - [ ] Listar agendamentos.
+    - [x] Agendamento de área comum;
+    - [x] Reagendamento de área comum;
+    - [x] Cancelamento de agendamento; e
+    - [x] Listar agendamentos.
 
 ## Definições
 
