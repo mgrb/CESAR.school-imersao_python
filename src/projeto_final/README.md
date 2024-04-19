@@ -9,25 +9,25 @@ Sistema para gestão de condomínios habitacionais.
 ## Funcionalidades
 
 1. [Cadastro de **Unidades Habitacionais**](#cadastro-de-unidades-habitacionais):
-    - Inclui unidade habitacional;
-    - Altera unidade habitacional;
-    - Exclui unidade habitacional; e
-    - Listar unidades habitacionais.
+    - [x] Inclui unidade habitacional;
+    - [ ] Altera unidade habitacional;
+    - [ ] Exclui unidade habitacional; e
+    - [x] Listar unidades habitacionais.
 1. [Cadastro de **Moradores**](#cadastro-de-moradores):
-    - Inclui morador;
-    - Altera morador;
-    - Exclui morador; e
-    - Listar moradores.
+    - [ ] Inclui morador;
+    - [ ] Altera morador;
+    - [ ] Exclui morador; e
+    - [ ] Listar moradores.
 1. [Cadastro de **Áreas Comuns**](#cadastro-de-áreas-comuns):
-    - Inclui área comum;
-    - Altera área comun;
-    - Exclui área comun; e
-    - Listar área comuns.
+    - [ ] Inclui área comum;
+    - [ ] Altera área comun;
+    - [ ] Exclui área comun; e
+    - [ ] Listar área comuns.
 1. [Gestão de **Reservas de Áreas Comuns**](#gestão-de-reservas-de-áreas-comuns):
-    - Agendamento de área comum;
-    - Reagendamento de área comum;
-    - Cancelamento de agendamento; e
-    - Listar agendamentos.
+    - [ ] Agendamento de área comum;
+    - [ ] Reagendamento de área comum;
+    - [ ] Cancelamento de agendamento; e
+    - [ ] Listar agendamentos.
 
 ## Definições
 
