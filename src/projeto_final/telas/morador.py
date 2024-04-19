@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from mem_db import (
     delete_morador,
     find_morador_by_cpf,
@@ -41,6 +43,25 @@ def print_tela_morador_menu() -> None:
         return ask_for_option(opcoes=opc_menu_morador.keys())
 
 
+def load_unidade_habitacional_into_moradores(
+    moradores: list[dict],
+) -> list[dict]:
+    """Carrega a unidade habitacional de cada morador."""
+    return [
+        load_unidade_habitacional_into_morador(morador) for morador in moradores
+    ]
+
+
+def load_unidade_habitacional_into_morador(morador: dict) -> dict:
+    """Carrega a unidade habitacional de um morador."""
+    unid_habit = find_unidade_habitacional_by_id(
+        morador['und_habit_id'],
+    )
+    morador_c = morador.copy()
+    morador_c['und_habit_id'] = unid_habit['identificador']
+    return morador_c
+
+
 def print_tela_morador_listar() -> None:
     """Imprime a tela de Moradores."""
     console = Console()
@@ -54,10 +75,15 @@ def print_tela_morador_listar() -> None:
                 ),
             )
         else:
+            moradores_nested_unid_habit = (
+                load_unidade_habitacional_into_moradores(
+                    moradores(),
+                )
+            )
             print(
                 build_table_panel(
                     'Moradores - Listagem',
-                    moradores(),
+                    moradores_nested_unid_habit,
                 ),
             )
 
@@ -145,7 +171,11 @@ def print_tela_morador_alterar() -> None:
                 )
 
         update_morador(
-            morador['id'], morador['cpf'], nome, email, und_habit_nova['id']
+            morador['id'],
+            morador['cpf'],
+            nome,
+            email,
+            und_habit_nova['id'],
         )
         print(
             Text(
@@ -181,7 +211,12 @@ def print_tela_morador_excluir() -> None:
                     ),
                 )
 
-        print(build_option_panel('Morador', morador))
+        print(
+            build_option_panel(
+                'Dados do morador',
+                load_unidade_habitacional_into_morador(morador),
+            ),
+        )
 
         confirm = ask_for_option(
             question=f'Deseja realmente excluir o morador [b][{morador["nome"]}][/]? [b](S)=Sim / (N)=Não[/]',
