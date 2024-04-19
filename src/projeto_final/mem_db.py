@@ -1,5 +1,9 @@
 """Módulo que contém a estrutura de memória da aplicação."""
 
+from __future__ import annotations
+
+from copy import deepcopy
+
 MORADORES_DB = []
 AREAS_COMUNS_DB = []
 RESERVAS_DB = []
@@ -186,6 +190,91 @@ def reservas() -> list[dict]:
     return RESERVAS_DB
 
 
+def insert_reserva(area_comum_id: int, data: str, morador_id: int) -> None:
+    """Insere uma reserva no banco de dados."""
+    global reserva_last_id
+    reserva_last_id += 1
+    RESERVAS_DB.append(
+        {
+            'id': reserva_last_id,
+            'area_comum_id': area_comum_id,
+            'data': data,
+            'morador_id': morador_id,
+        },
+    )
+
+
+def delete_reserva(id: int) -> None:
+    """Remove uma reserva do banco de dados."""
+    for reserva in RESERVAS_DB:
+        if reserva['id'] == id:
+            RESERVAS_DB.remove(reserva)
+            break
+
+
+def is_area_comum_livre(area_comum_id: int, data: str) -> bool:
+    """Verifica se uma área comum está livre em uma determinada data."""
+    for reserva in RESERVAS_DB:
+        if (
+            reserva['area_comum_id'] == area_comum_id
+            and reserva['data'] == data
+        ):
+            return False
+    return True
+
+
+def find_reservas_by_morador_id(morador_id: int) -> list[dict]:
+    """Busca todas as reservas de um morador."""
+    return [
+        reserva
+        for reserva in RESERVAS_DB
+        if reserva['morador_id'] == morador_id
+    ]
+
+
+def find_reservas_by_area_comum_id(area_comum_id: int) -> list[dict]:
+    """Busca todas as reservas de uma área comum."""
+    return [
+        reserva
+        for reserva in RESERVAS_DB
+        if reserva['area_comum_id'] == area_comum_id
+    ]
+
+
+def find_reservas_by_data(data: str) -> list[dict]:
+    """Busca todas as reservas de uma data."""
+    return [reserva for reserva in RESERVAS_DB if reserva['data'] == data]
+
+
+def find_reserva_by_id(id: int) -> dict:
+    """Busca uma reserva pelo id."""
+    for reserva in RESERVAS_DB:
+        if reserva['id'] == id:
+            return reserva
+    return None
+
+
+def find_morador_by_id(id: int) -> dict:
+    """Busca um morador pelo id."""
+    for morador in MORADORES_DB:
+        if morador['id'] == id:
+            return morador
+    return None
+
+
+def fetch_nested_data_from_reserva(reservas: list[dict]) -> list[dict]:
+    """Carreagar dados aninhados de reservas."""
+    reservas_nested = deepcopy(reservas)
+    for reserva in reservas_nested:
+        morador_id = reserva.pop('morador_id')
+        area_comum_id = reserva.pop('area_comum_id')
+        morador = find_morador_by_id(morador_id)
+        reserva['cpf'] = morador.get('cpf')
+        reserva['morador'] = morador.get('nome')
+        reserva['area_comum'] = find_area_comum_by_id(area_comum_id)['nome']
+    return reservas_nested
+
+
 # INIT SEEDED DATA
 insert_unidade_habitacional('101', 'Fulano', 'fulano@uol.com', '3 quartos')
 insert_unidade_habitacional('102', 'Ciclano', 'ciclano@aol.com', '2 quartos')
@@ -200,3 +289,9 @@ insert_area_comum('Salão de Festas', 'Salão de festas com churrasqueira.')
 insert_area_comum('Piscina', 'Piscina com raia de 25m.')
 insert_area_comum('Academia', 'Academia completa com personal trainer.')
 insert_area_comum('Sauna', 'Sauna seca e a vapor.')
+
+insert_reserva(1, '2021-12-31', 1)
+insert_reserva(2, '2021-12-31', 2)
+insert_reserva(3, '2021-12-31', 3)
+insert_reserva(4, '2021-12-31', 1)
+# END INIT SEEDED DATA
