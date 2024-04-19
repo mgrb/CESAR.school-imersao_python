@@ -1,4 +1,10 @@
-from mem_db import insert_unidade_habitacional, unidades_habitacionais
+from mem_db import (
+    delete_unidade_habitacional,
+    find_unidade_habitacional_by_identificador,
+    insert_unidade_habitacional,
+    unidades_habitacionais,
+    update_unidade_habitacional,
+)
 from rich import print
 from rich.console import Console
 from rich.text import Text
@@ -100,6 +106,138 @@ def print_tela_unidade_habitacional_cadastrar() -> str:
         return '0'
 
 
+def print_tela_unidade_habitacional_alterar() -> str:
+    """Imprime a tela de alteração de Unidades Habitacionais."""
+    console = Console()
+    with console:
+        print(build_title_panel())
+        print(
+            Text(
+                'Alterar Unidade Habitacional',
+                style='bold yellow',
+                justify='center',
+            ),
+        )
+
+        und_habit = None
+        while not und_habit:
+            identificador = ask_for_option(
+                'Informe o [b]Identificador[/] da unidade a ser alterada',
+            )
+            und_habit = find_unidade_habitacional_by_identificador(
+                identificador,
+            )
+            if und_habit is None:
+                print(
+                    Text(
+                        'Unidade Habitacional não encontrada!',
+                        style='bold red',
+                        justify='center',
+                    ),
+                )
+
+        print(
+            Text(
+                'Informe os novos dados da unidade',
+                justify='center',
+            ),
+        )
+        proprietario = ask_for_option(
+            question='[b]Nome do propriétário[/]',
+            dft=und_habit['proprietario'],
+        )
+        email = ask_for_option(
+            question='[b]E-mail do propriétário[/]',
+            dft=und_habit['email'],
+        )
+        caracteristicas = ask_for_option(
+            question='[b]Características da unidade[/]',
+            dft=und_habit['caracteristicas'],
+        )
+
+        update_unidade_habitacional(
+            und_habit['id'],
+            und_habit['identificador'],
+            proprietario,
+            email,
+            caracteristicas,
+        )
+        print(
+            Text(
+                'Unidade Habitacional alterada com sucesso!',
+                style='bold green blink',
+                justify='center',
+            ),
+        )
+
+        ask_for_option(
+            'Pressione qualquer tecla para voltar...',
+        )
+        return '0'
+
+
+def print_tela_unidade_habitacional_excluir() -> str:
+    """Imprime a tela de exclusão de Unidades Habitacionais."""
+    console = Console()
+    with console:
+        print(build_title_panel())
+        print(
+            Text(
+                'Excluir Unidade Habitacional',
+                style='bold yellow',
+                justify='center',
+            ),
+        )
+
+        und_habit = None
+        while not und_habit:
+            identificador = ask_for_option(
+                'Informe o [b]Identificador[/] da unidade a ser excluída',
+            )
+            und_habit = find_unidade_habitacional_by_identificador(
+                identificador,
+            )
+            if und_habit is None:
+                print(
+                    Text(
+                        'Unidade Habitacional não encontrada!',
+                        style='bold red',
+                        justify='center',
+                    ),
+                )
+
+        print(
+            build_option_panel('Dados da Unidade Habitacional', und_habit),
+        )
+
+        confirm = ask_for_option(
+            question='Deseja realmente excluir a unidade habitacional? [b](S)= Sim / (N)=Não[/]',
+            dft='N',
+        )
+        if confirm.upper() == 'S':
+            delete_unidade_habitacional(und_habit['id'])
+            print(
+                Text(
+                    'Unidade Habitacional excluída com sucesso!',
+                    style='bold green blink',
+                    justify='center',
+                ),
+            )
+        else:
+            print(
+                Text(
+                    'Exclusão cancelada!',
+                    style='bold red',
+                    justify='center',
+                ),
+            )
+
+        ask_for_option(
+            'Pressione qualquer tecla para voltar...',
+        )
+        return '0'
+
+
 def delegate_control() -> str:
     """Delega o controle para a tela de Unidades Habitacionais."""
     console = Console()
@@ -108,15 +246,15 @@ def delegate_control() -> str:
         opc = print_tela_unidade_habitacional_menu()
         console.clear()
         match opc:
-            case '1':
+            case '1':  # LISTAR
                 opc = print_tela_unidade_habitacional_listar()
-            case '2':
+            case '2':  # CADASTRAR
                 opc = print_tela_unidade_habitacional_cadastrar()
-            case '3':
-                print('Alterar Unidade Habitacional')
-            case '4':
-                print('Excluir Unidade Habitacional')
-            case '5':
+            case '3':  # ALTERAR
+                opc = print_tela_unidade_habitacional_alterar()
+            case '4':  # EXCLUIR
+                opc = print_tela_unidade_habitacional_excluir()
+            case '5':  # VOLTAR
                 print('Voltando...')
             case _:
                 print('Opção inválida')

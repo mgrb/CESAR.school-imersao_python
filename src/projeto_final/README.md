@@ -10,8 +10,8 @@ Sistema para gestão de condomínios habitacionais.
 
 1. [Cadastro de **Unidades Habitacionais**](#cadastro-de-unidades-habitacionais):
     - [x] Inclui unidade habitacional;
-    - [ ] Altera unidade habitacional;
-    - [ ] Exclui unidade habitacional; e
+    - [x] Altera unidade habitacional;
+    - [x] Exclui unidade habitacional; e
     - [x] Listar unidades habitacionais.
 1. [Cadastro de **Moradores**](#cadastro-de-moradores):
     - [ ] Inclui morador;

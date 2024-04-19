@@ -117,6 +117,14 @@ def find_unidade_habitacional_by_identificador(identificador: str) -> dict:
     return None
 
 
+def find_unidade_habitacional_by_id(id: int) -> dict:
+    """Busca uma unidade habitacional pelo id."""
+    for unidade_habitacional in UNIDADES_HABITACIONAIS_DB:
+        if unidade_habitacional['id'] == id:
+            return unidade_habitacional
+    return None
+
+
 def unidades_habitacionais() -> list[dict]:
     """Retorna todas as unidades habitacionais cadastradas."""
     return UNIDADES_HABITACIONAIS_DB
@@ -176,3 +184,14 @@ def areas_comuns() -> list[dict]:
 def reservas() -> list[dict]:
     """Retorna todas as reservas cadastradas."""
     return RESERVAS_DB
+
+
+# INIT SEEDED DATA
+insert_unidade_habitacional('101', 'Fulano', 'fulano@uol.com', '3 quartos')
+insert_unidade_habitacional('102', 'Ciclano', 'ciclano@aol.com', '2 quartos')
+insert_unidade_habitacional('103', 'Beltrano', 'beltrano@bol.com', '1 quarto')
+insert_unidade_habitacional('104', 'Fátima', 'fafa@ig.com.br', '4 quartos')
+
+insert_morador('123.456.789-00', 'Fulano', 'fulano@uol.com', 1)
+insert_morador('987.654.321-00', 'Ciclano', 'ciclano@aol.com', 2)
+insert_morador('456.789.123-00', 'Geronimo', 'gege@terra.com.br', 3)
