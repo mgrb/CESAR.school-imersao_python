@@ -2,8 +2,7 @@
 
 from __future__ import annotations
 
-from rich import box, print
-from rich.console import Console
+from rich import box
 from rich.panel import Panel
 from rich.prompt import Prompt
 from rich.table import Table
@@ -69,32 +68,3 @@ def ask_for_option(
 ) -> str:
     """Pergunta ao usuário qual opção deseja escolher."""
     return Prompt.ask(f'{question }', choices=opcoes, default=dft)
-
-
-if __name__ == '__main__':
-    pessoas = []
-    pessoas.append(
-        {'Nome': 'Fulano', 'Idade': 30, 'Sexo': 'M', 'CPF': '123.456.789-00'},
-    )
-    pessoas.append(
-        {'Nome': 'Ciclano', 'Idade': 25, 'Sexo': 'F', 'CPF': '987.654.321-00'},
-    )
-    pessoas.append(
-        {'Nome': 'Beltrano', 'Idade': 40, 'Sexo': 'M', 'CPF': '456.789.123-00'},
-    )
-    pessoas.append(
-        {'Nome': 'Fulana', 'Idade': 35, 'Sexo': 'F', 'CPF': '789.123.456-00'},
-    )
-
-    console = Console()
-    console.clear()
-    with console:
-        print(build_title_panel('ANDAR DE CIMA - 🏢☝️ :: Gestão Condominial'))
-        print(build_table_panel('Pessoas', pessoas))
-        print(
-            build_content_panel(
-                'Menu Principal',
-                '1. Unidades Habitacionais\n2. Moradores\n3. Áreas Comuns\n4. Reservas\n5. Sair',
-            ),
-        )
-        promt_user(['1', '2', '3', '4', '5'])

@@ -1,6 +1,7 @@
 """Modulo responsável por iniciar a aplicação AndarDeCimaApp."""
 
 from rich.console import Console
+from telas.morador import delegate_control as go_to_morador
 from telas.principal import print_tela_principal
 from telas.unidade_habitacional import (
     delegate_control as go_to_unidade_habitacional,
@@ -19,7 +20,7 @@ def main() -> None:
             case '1':
                 go_to_unidade_habitacional()
             case '2':
-                print('Moradores')
+                go_to_morador()
             case '3':
                 print('Áreas Comuns')
             case '4':

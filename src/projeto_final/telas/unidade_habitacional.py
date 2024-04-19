@@ -39,7 +39,7 @@ def print_tela_unidade_habitacional_menu() -> str:
         return ask_for_option(opcoes=opc_menu_unidade_habitacional.keys())
 
 
-def print_tela_unidade_habitacional_listar() -> str:
+def print_tela_unidade_habitacional_listar() -> None:
     """Imprime a tela de Unidades Habitacionais."""
     console = Console()
     with console:
@@ -60,10 +60,9 @@ def print_tela_unidade_habitacional_listar() -> str:
             )
 
         ask_for_option('Pressione qualquer tecla para voltar...')
-        return '0'
 
 
-def print_tela_unidade_habitacional_cadastrar() -> str:
+def print_tela_unidade_habitacional_cadastrar() -> None:
     """Imprime a tela de cadastro de Unidades Habitacionais."""
     console = Console()
     with console:
@@ -103,10 +102,9 @@ def print_tela_unidade_habitacional_cadastrar() -> str:
         ask_for_option(
             'Pressione qualquer tecla para voltar...',
         )
-        return '0'
 
 
-def print_tela_unidade_habitacional_alterar() -> str:
+def print_tela_unidade_habitacional_alterar() -> None:
     """Imprime a tela de alteração de Unidades Habitacionais."""
     console = Console()
     with console:
@@ -173,10 +171,9 @@ def print_tela_unidade_habitacional_alterar() -> str:
         ask_for_option(
             'Pressione qualquer tecla para voltar...',
         )
-        return '0'
 
 
-def print_tela_unidade_habitacional_excluir() -> str:
+def print_tela_unidade_habitacional_excluir() -> None:
     """Imprime a tela de exclusão de Unidades Habitacionais."""
     console = Console()
     with console:
@@ -211,7 +208,7 @@ def print_tela_unidade_habitacional_excluir() -> str:
         )
 
         confirm = ask_for_option(
-            question='Deseja realmente excluir a unidade habitacional? [b](S)= Sim / (N)=Não[/]',
+            question=f'Deseja realmente excluir a unidade habitacional [b]{und_habit["identificador"]}[/]? [b](S)= Sim / (N)=Não[/]',
             dft='N',
         )
         if confirm.upper() == 'S':
@@ -235,7 +232,6 @@ def print_tela_unidade_habitacional_excluir() -> str:
         ask_for_option(
             'Pressione qualquer tecla para voltar...',
         )
-        return '0'
 
 
 def delegate_control() -> str:
@@ -247,13 +243,13 @@ def delegate_control() -> str:
         console.clear()
         match opc:
             case '1':  # LISTAR
-                opc = print_tela_unidade_habitacional_listar()
+                print_tela_unidade_habitacional_listar()
             case '2':  # CADASTRAR
-                opc = print_tela_unidade_habitacional_cadastrar()
+                print_tela_unidade_habitacional_cadastrar()
             case '3':  # ALTERAR
-                opc = print_tela_unidade_habitacional_alterar()
+                print_tela_unidade_habitacional_alterar()
             case '4':  # EXCLUIR
-                opc = print_tela_unidade_habitacional_excluir()
+                print_tela_unidade_habitacional_excluir()
             case '5':  # VOLTAR
                 print('Voltando...')
             case _:
