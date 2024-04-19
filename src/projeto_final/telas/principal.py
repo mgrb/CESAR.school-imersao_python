@@ -3,11 +3,15 @@
 Suite de funç~oes que montam as telas da aplicação.
 """
 
-from rich import box, print
+from __future__ import annotations
+
+from rich import print
 from rich.console import Console
-from rich.panel import Panel
-from rich.prompt import Prompt
-from rich.text import Text
+from telas.template import (
+    ask_for_option,
+    build_option_panel,
+    build_title_panel,
+)
 
 opc_menu_principal = {
     '1': 'Unidades Habitacionais',
@@ -18,44 +22,10 @@ opc_menu_principal = {
 }
 
 
-def build_title_panel(title: str) -> Panel:
-    """Imprime um título na tela."""
-    tt = Text(title)
-    return Panel(
-        tt,
-        style='blue',
-        box=box.DOUBLE_EDGE,
-    )
-
-
-def build_content_panel() -> Panel:
-    """Imprime o conteúdo da tela principal."""
-    menu_itens = (
-        f'[blue bold]{key}[/]. {value}'
-        for key, value in opc_menu_principal.items()
-    )
-
-    return Panel(
-        '\n'.join(menu_itens),
-        title='Menu Principal',
-        title_align='left',
-        box=box.HEAVY_EDGE,
-    )
-
-
-def ask_for_option(options: list) -> str:
-    """Pergunta ao usuário qual opção deseja escolher."""
-    return Prompt.ask('Escolha uma opção: ', choices=options)
-
-
-def show_principal() -> str:
-    """Monta a tela principal da aplicação."""
+def print_tela_principal() -> str:
+    """Imprime a tela principal do sistema."""
     console = Console()
-    console.clear()
-
-    titulo = 'ANDAR DE CIMA - 🏢☝️'
-
     with console:
-        print(build_title_panel(titulo))
-        print(build_content_panel())
-        return ask_for_option(opc_menu_principal.keys())
+        print(build_title_panel())
+        print(build_option_panel('Menu Principal', opc_menu_principal))
+        return ask_for_option(opcoes=opc_menu_principal.keys())

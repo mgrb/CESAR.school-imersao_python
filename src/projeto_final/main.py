@@ -1,16 +1,23 @@
 """Modulo responsável por iniciar a aplicação AndarDeCimaApp."""
 
-from telas.principal import show_principal
+from rich.console import Console
+from telas.principal import print_tela_principal
+from telas.unidade_habitacional import (
+    delegate_control as go_to_unidade_habitacional,
+)
+
+csl = Console()
+csl.clear()
 
 
-def main():
+def main() -> None:
     opc = 0
     while opc != '5':
-        opc = show_principal()
-
+        opc = print_tela_principal()
+        csl.clear()
         match opc:
             case '1':
-                print('Unidades Habitacionais')
+                go_to_unidade_habitacional()
             case '2':
                 print('Moradores')
             case '3':
@@ -25,3 +32,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    csl.clear()
